@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "Neymar JR",
+        "desc": "Neymar, também conhecido como Neymar Jr., é jogador de futebol e atua como atacante. Revelado pelo Santos em 2009, ganhou títulos pelo clube, como a Copa do Brasil e Libertadores. Nos anos seguintes, se tornou um dos principais jogadores do país e uma das maiores celebridades brasileiras.",
+        "url_info": "https://natelinha.uol.com.br/famosos/tudo-sobre/neymar"
+    },
+    {
+        "nome": "Craque Neto",
+        "desc": "José Ferreira Neto (nascido em 9 de setembro de 1966), comumente conhecido como Craque Neto ou simplesmente Neto , é um ex -jogador de futebol profissional brasileiro e atual apresentador esportivo . Após se aposentar do jogo, ele tem atuado na mídia.",
+        "url_info": "https://en.wikipedia.org/wiki/Neto_(footballer,_born_1966)"
+    },
+    {
+        "nome": "Jorge Jesus",
+        "desc": "Jorge Fernando Pinheiro de Jesus, nascido em 24 de julho de 1954, é um treinador de futebol profissional português e ex-jogador, que é o treinador do clube Saudi Pro League Al Hilal.",
+        "url_info": "https://en.wikipedia.org/wiki/Jorge_Jesus"
+    },
+    {
+        "nome": "Lionel Messi",
+        "desc": "Lionel Andrés Messi Cuccittini (Rosário, 24 de junho de 1987) é um futebolista argentino que atua como atacante e atualmente defende o Inter Miami. Como capitão da Seleção Argentina, venceu a Copa do Mundo do Catar de 2022.",
+        "url_info": "https://pt.wikipedia.org/wiki/Lionel_Messi"
+    },
+    {
+        "nome": "Cristiano Ronaldo",
+        "desc": "Cristiano Ronaldo, o CR7, é jogador de futebol e atua pela seleção portuguesa. Considerado um dos maiores jogadores da história, já venceu 5 vezes o prêmio Bola de Ouro da Fifa. Namorou com a modelo russa Irina Shayk por 5 anos, e desde 2017 vive um relacionamento com a modelo Georgina Rodríguez.",
+        "url_info": "https://revistaquem.globo.com/famoso/cristiano-ronaldo/"
+    }
+]

@@ -1,0 +1,27 @@
+[
+	{
+		"nome": "pedido 1",
+		"desc": "o pedido 1 foi realizado dia 21/02/2025 e comprou uma camisa azul do neymar 2012",
+		"url_info": "https://lista.mercadolivre.com.br/camisa-azul-do-santos-neymar"
+	},
+	{
+		"nome": "pedido 2",
+		"desc": "o pedido 2 foi realizado dia 21/03/2025 e a compra foi de um Chuteira Puma do Batman",
+		"url_info": "https://shoxstore.com.br/chuteira-de-campo-puma-future-z-1-3-fg-neymar-x-batman"
+	},
+	{
+		"nome": "pedido 3",
+		"desc": "o pedido 3 foi realizado dia 21/04/2025 e a compra foi de um Perfume Blessed",
+		"url_info": "https://shopee.com.br/Perfume-Blessed-100ml-Neymar-Virginia-Fonseca-Wepink-i.1173586897.22197575705"
+	},
+	{
+		"nome": "pedido 4",
+		"desc": "o pedido 4 foi realizado dia 21/05/2025 e a compra foi de um desodorante above com parceria Neymar Jr",
+		"url_info": "https://www.paguemenos.com.br/desodorante-above-neymar-jr-masculino-90g/p"
+	},
+	{
+		"nome": "pedido 5",
+		"desc": "o pedido 5 foi realizado dia 21/06/2025 e a compra foi de uma camisa ovrsized do Neymar Jr",
+		"url_info": "https://www.xapostore.com.br/streetwear/oversized/camiseta-oversized-neymar-junior"
+	}
+]

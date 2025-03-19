@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nome": "roupa",
+        "tipo": "camisa"
+    },
+    {
+        "id": 2,
+        "nome": "sapato",
+        "tipo": "chuteira"
+    },
+    {
+        "id": 3,
+        "nome": "aroma",
+        "tipo": "perfume"
+    },
+    {
+        "id": 4,
+        "nome": "aroma",
+        "tipo": "desodorante"
+    },
+    {
+        "id": 5,
+        "nome": "roupa",
+        "tipo": "camisa oversized"
+    }
+]
