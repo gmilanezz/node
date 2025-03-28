@@ -1,76 +1,122 @@
-const fs = require('fs');
-const path = require('path');
-const express = require('express');
-
-const app = express();
-const port = 3000;
-
-const experimentoPath = path.join(__dirname, 'experimento.json');
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Rota para exibir os 2 links
-app.get('/', (req, res) => {
-    res.send('<h1>Bem vindo a AC2</h1> <br>' + '<a href="/adicionarexperimento">Adicionar Experimento</a><br>' + '<a href="/experimento">Visualizar Experimentos</a><br>' + '<a href="/buscar-nome/:nome">Filtrar Experimentos</a>');
-});
-
-function buscarNome(nome) {
-    return experimento.find(experimento =>
-        experimento.nome.toLowerCase() === nome.toLowerCase());
-}
-
-// Rota de filtro por nome da matéria
-app.get('/buscar-nome/:nome', (req, res) => {
-    const nomeDaNomeBuscada = req.params.nome;
-    const nomesEncontradas = buscarNome(nomeDaNomeBuscada);
- 
-    if (nomesEncontradas) {
-        res.send('<h1>Informações da nome encontrada:<h1><pre>' + 
-        JSON.stringify(nomesEncontradas, null, 2) + '</pre>');
-    } else {
-        res.send(`<h1>Nenhuma informação encontrada.</h1>`);
-    }
-});
-
-// Lendo os dados do arquivo JSON
-let experimentoData = fs.readFileSync(experimentoPath, 'utf-8');
-let experimento = JSON.parse(experimentoData);
-
-// Função para salvar os dados atualizados no arquivo 350N
-function salvarDados() {
-    fs.writeFileSync(experimentoPath, JSON.stringify(experimento, null, 2));
-}
-
-// Rota para exibir o formulário HTML
-app.get('/adicionarexperimento', (req, res) => {
-    res.sendFile(path.join(__dirname, 'adicionarexperimento.html'));
-});
-
-// Rota para processar a requisição POST do formulário
-app.post('/adicionarexperimento', (req, res) => {
-    const novoexperimento = req.body;
-
-    // Verificando se o experimento já existe pelo nome
-    if (experimento.find(experimento => experimento.nome.toLowerCase() === novoexperimento.nome.toLowerCase())) {
-        res.send('<h1>experimento já existe. Não é possível adicionar duplicatas.</h1>');
-        return;
-    }
-
-    // Adicionando o novo experimento ao array de experimento
-    experimento.push(novoexperimento);
-
-    // Salvando os dados atualizados no arquivo JSON
-    salvarDados();
-    // Enviando uma resposta indicando que o experimento foi adicionado com sucesso
-    res.send('<h1>experimento adicionado com sucesso!</h1>');
-});
-
-app.get('/experimento', (req, res) => {
-    res.sendFile(path.join(__dirname, 'experimento.json'))
-});
-
-// Iniciar o servidor e escutar na porta especificada
-app.listen(port, () => {
-    console.log('Servidor iniciado em http://localhost:' + port);
-});
+[
+  {
+    "nome": "Efeito da Luz na Fotossíntese",
+    "desc": "Investigação da taxa de fotossíntese em plantas sob diferentes intensidades de luz.",
+    "data": "2023-10-26",
+    "url_info": "https://example.com/info/fotossintese",
+    "url_foto": "https://example.com/fotos/fotossintese.jpg",
+    "url_video": "https://example.com/videos/fotossintese.mp4"
+  },
+  {
+    "nome": "Crescimento de Bactérias em Diferentes Meios",
+    "desc": "Análise do crescimento de culturas bacterianas em ágar com diferentes nutrientes.",
+    "data": "2023-10-25",
+    "url_info": "https://example.com/info/bacterias",
+    "url_foto": "https://example.com/fotos/bacterias.jpg",
+    "url_video": "https://example.com/videos/bacterias.mp4"
+  },
+  {
+    "nome": "Reação Química com Catalisador",
+    "desc": "Estudo da velocidade de uma reação química com a presença de um catalisador.",
+    "data": "2023-10-24",
+    "url_info": "https://example.com/info/catalisador",
+    "url_foto": "https://example.com/fotos/catalisador.jpg",
+    "url_video": "https://example.com/videos/catalisador.mp4"
+  },
+  {
+    "nome": "Efeito do pH no Crescimento de Fungos",
+    "desc": "Observação do crescimento de fungos em soluções com diferentes níveis de pH.",
+    "data": "2023-10-23",
+    "url_info": "https://example.com/info/fungos",
+    "url_foto": "https://example.com/fotos/fungos.jpg",
+    "url_video": "https://example.com/videos/fungos.mp4"
+  },
+  {
+    "nome": "Teste de Condutividade Elétrica em Metais",
+    "desc": "Medição da condutividade elétrica em diferentes tipos de metais.",
+    "data": "2023-10-22",
+    "url_info": "https://example.com/info/metais",
+    "url_foto": "https://example.com/fotos/metais.jpg",
+    "url_video": "https://example.com/videos/metais.mp4"
+  },
+  {
+    "nome": "Osmose em Células Vegetais",
+    "desc": "Análise do movimento da água através da membrana celular em diferentes concentrações de sal.",
+    "data": "2023-10-21",
+    "url_info": "https://example.com/info/osmose",
+    "url_foto": "https://example.com/fotos/osmose.jpg",
+    "url_video": "https://example.com/videos/osmose.mp4"
+  },
+  {
+    "nome": "Influência da Temperatura na Atividade Enzimática",
+    "desc": "Estudo da taxa de reação enzimática em diferentes temperaturas.",
+    "data": "2023-10-20",
+    "url_info": "https://example.com/info/enzimas",
+    "url_foto": "https://example.com/fotos/enzimas.jpg",
+    "url_video": "https://example.com/videos/enzimas.mp4"
+  },
+  {
+    "nome": "Teste de Solubilidade de Sais",
+    "desc": "Determinação da solubilidade de diferentes sais em água a diferentes temperaturas.",
+    "data": "2023-10-19",
+    "url_info": "https://example.com/info/solubilidade",
+    "url_foto": "https://example.com/fotos/solubilidade.jpg",
+    "url_video": "https://example.com/videos/solubilidade.mp4"
+  },
+  {
+    "nome": "Efeito da Gravidade no Crescimento de Plantas",
+    "desc": "Observação do crescimento de plantas em diferentes orientações em relação à gravidade.",
+    "data": "2023-10-18",
+    "url_info": "https://example.com/info/gravidade",
+    "url_foto": "https://example.com/fotos/gravidade.jpg",
+    "url_video": "https://example.com/videos/gravidade.mp4"
+  },
+  {
+    "nome": "Análise da Decomposição de Matéria Orgânica",
+    "desc": "Estudo da taxa de decomposição de diferentes tipos de matéria orgânica.",
+    "data": "2023-10-17",
+    "url_info": "https://example.com/info/decomposicao",
+    "url_foto": "https://example.com/fotos/decomposicao.jpg",
+    "url_video": "https://example.com/videos/decomposicao.mp4"
+  },
+  {
+    "nome": "Adriano",
+    "desc": "cvdesagvef",
+    "data": "gvdsgfvds",
+    "url_info": "gerfger",
+    "url_foto": "sgddfgvds",
+    "url_video": "dgfbvsdfbvdfs"
+  },
+  {
+    "nome": "gvdefbdfs",
+    "desc": "dfbsdfgbsdf",
+    "data": "bdfbdf",
+    "url_info": "bdfbdf",
+    "url_foto": "dfbdfbfd",
+    "url_video": "dfbsdfb"
+  },
+  {
+    "nome": "j",
+    "desc": "j",
+    "data": "j",
+    "url_info": "j",
+    "url_foto": "j",
+    "url_video": "j"
+  },
+  {
+    "nome": "s",
+    "desc": "s",
+    "data": "s",
+    "url_info": "s",
+    "url_foto": "s",
+    "url_video": "s"
+  },
+  {
+    "nome": "g",
+    "desc": "g",
+    "data": "g",
+    "url_info": "g",
+    "url_foto": "g",
+    "url_video": "g"
+  }
+]
