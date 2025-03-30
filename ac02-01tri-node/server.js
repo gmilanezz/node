@@ -21,7 +21,7 @@ function buscarNome(nome) {
 }
  
 // Rota de filtro por nome da matéria
-app.get('/buscar-nome/:nome', (req, res) => {
+app.get('/:nome', (req, res) => {
     const nomeDaNomeBuscada = req.params.nome;
     const nomesEncontradas = buscarNome(nomeDaNomeBuscada);
  
@@ -43,7 +43,7 @@ function salvarDados() {
 }
  
 // Rota para exibir o formulário HTML
-app.get('/adicionarexperimento', (req, res) => {
+app.get('/adicionar-experimento', (req, res) => {
     res.sendFile(path.join(__dirname, 'adicionarexperimento.html'));
 });
  
