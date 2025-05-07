@@ -1,0 +1,52 @@
+[
+    {
+        "nome": "sabonete",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "johnson & johnson",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "camisa polo",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "tv",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "desodorante",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "perfume",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "tenis",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "chinelo",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "computador",
+        "qnt": "4",
+        "preco": "99.99"
+    },
+    {
+        "nome": "garrafa",
+        "qnt": "4",
+        "preco": "99.99"
+    }
+]
