@@ -1,0 +1,27 @@
+[
+  {
+    "titulo": "livro paradidático",
+    "descricao": "ler o livro paradidático",
+    "disciplina": "portugues"
+  },
+  {
+    "titulo": "estudar para a atividade",
+    "descricao": "conteúdo em apostilas",
+    "disciplina": "javascript"
+  },
+  {
+    "titulo": "fazer site estilizado",
+    "descricao": "não ultrapassar de comandos passados em aula",
+    "disciplina": "css"
+  },
+  {
+    "titulo": "máquina louca",
+    "descricao": "fazer uma máqwuina louca",
+    "disciplina": "fisica"
+  },
+  {
+    "titulo": "criar um jogo",
+    "descricao": "criar um jogo de tabuleiro sobre potenciação ou expressão algébrica",
+    "disciplina": "matematica"
+  }
+]
