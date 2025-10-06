@@ -19,7 +19,7 @@ const urlMongo = 'mongodb://127.0.0.1:27017';
 const nomeBanco = 'sistemaLogin';
 
 app.get('/registro', (req, res) => {
-    res.sendFile(__dirname + '/views/registro.html');
+    res.sendFile(__dirname + '/registro.html');
 });
 
 app.post('/registro', async (req, res) => {
@@ -50,7 +50,7 @@ app.post('/registro', async (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/views/login.html');
+    res.sendFile(__dirname + '/login.html');
 });
 
 app.post('/login', async (req, res) => {
@@ -84,11 +84,11 @@ function protegerRota(req, res, proximo) {
 }
 
 app.get('/bemvindo', protegerRota, (req, res) => {
-    res.sendFile(__dirname + '/views/bemvindo.html');
+    res.sendFile(__dirname + '/bemvindo.html');
 });
 
 app.get('/erro', (req, res) => {
-    res.sendFile(__dirname + '/views/erro.html')
+    res.sendFile(__dirname + '/erro.html')
 });
 
 app.get('/sair', (req, res) => {
@@ -102,4 +102,5 @@ app.get('/sair', (req, res) => {
 
 app.listen(port, () => {
     console.log('Servidor rodando na porta ' + port);
+
 });
